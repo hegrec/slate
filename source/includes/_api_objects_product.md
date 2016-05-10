@@ -2,10 +2,6 @@
 
 Properties for a saleable item in the catalog
 
-|||
-|---|---|
-| Managed by | [Products Resource](/api/?BasicAuth#products-resource)
-
 ## Product Object – Properties
 
 | Name | Type | Description |

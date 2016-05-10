@@ -30,6 +30,8 @@ includes:
   - api_CRUD_shipping_methods
   - api_objects_gift_certificate
   - api_CRUD_gift_certificates
+  - api_object_banner
+  - api_CRUD_banners
   - api_objects_blog_post
   - api_CRUD_blog_posts
   - api_objects_payment_method

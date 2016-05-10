@@ -1,12 +1,10 @@
-## Options belonging to an option set.
-
 |||
 |---|---|
 | **Manages** |
 | **OAuth Scopes** | `store_v2_products`
 ||`store_v2_products_read_only`
 
-## Operations
+## Option Set Option Operations
 
 *   [List Option Set Options](#list-option-set-options)
 *   [Get an Option Set Option](#get-an-option-set-option)
@@ -30,8 +28,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/option_sets/{option_set_id}/options?page={number}` |
-| `Limit` | int | `/api/v2/option_sets/{option_set_id}/options?limit={count}` |
+| Page | int | /api/v2/option_sets/{option_set_id}/options?page={number} |
+| Limit | int | /api/v2/option_sets/{option_set_id}/options?limit={count} |
 
 ```json
 [
@@ -152,16 +150,16 @@ Creates a new option associated with an option set.
 
 The following properties of the option set option are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `option_set_id`
-*   `values`
-*   `option`
+*   id
+*   option_set_id
+*   values
+*   option
 
 ### Requirements
 
 The following properties of the option set option are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `option_id`
+*   option_id
 
 ```curl
 {
@@ -200,11 +198,11 @@ Updates an existing option set option.
 
 The following properties of the option set option are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `option_id`
-*   `option_set_id`
-*   `values`
-*   `option`
+*   id
+*   option_id
+*   option_set_id
+*   values
+*   option
 
 ### Requirements
 
@@ -257,5 +255,5 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/option_sets/{option_set_id}/options?page={number}` |
-| `Limit` | int | `/api/v2/option_sets/{option_set_id}/options?limit={count}` |
+| Page | int | /api/v2/option_sets/{option_set_id}/options?page={number} |
+| Limit | int | /api/v2/option_sets/{option_set_id}/options?limit={count} |

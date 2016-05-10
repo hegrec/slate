@@ -1,13 +1,10 @@
-## Identity and account details for customers shopping at a Bigcommerce store.
-
 |||
 |---|---|
 | **Manages** |
-| **OAuth Scopes** | `store_v2_customers`
-||`store_v2_customers_read_only`
- |
+| **OAuth Scopes** | store_v2_customers |
+||store_v2_customers_read_only|
 
-## Operations
+## Customer Operations
 
 *   [List Customers](#list-customers)
 *   [Get a Customer](#get-a-customer)
@@ -21,12 +18,10 @@
 
 Gets the collection of customers. (Default sorting is by customer id, from lowest to highest.)
 
-
 *   [OAuth](#list-customers-oauth)
 >`GET /stores/{store_hash}/v2/customers`
 *   [Basic Auth](#list-customers-basic)
 >`GET /api/v2/customers`
-
 
 ### Filters
 
@@ -34,20 +29,20 @@ Filter parameters can be added to the URL query string to select specific custom
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `first_name` | string | `/api/v2/customers?first_name={value}` |
-| `last_name` | string | `/api/v2/customers?last_name={value}` |
-| `company` | string | `/api/v2/customers?company={value}` |
-| `email` | string | `/api/v2/customers?email={value}` |
-| `phone` | string | `/api/v2/customers?phone={value}` |
-| `store_credit` | string | `/api/v2/customers?store_credit={value}` |
-| `customer_group_id` | string | `/api/v2/customers?customer_group_id={value}` |
-| `min_id` | int | `/api/v2/customers?min_id={value}` |
-| `max_id` | int | `/api/v2/customers?max_id={value}` |
-| `min_date_created` | dateTime or date | `/api/v2/customers?min_date_created={value}` |
-| `max_date_created` | dateTime or date | `/api/v2/customers?max_date_created={value}` |
-| `min_date_modified` | dateTime or date | `/api/v2/customers?min_date_modified={value}` |
-| `max_date_modified` | dateTime or date | `/api/v2/customers?max_date_modified={value}` |
-| `tax_exempt_category` | date | `/api/v2/customers?tax_exempt_category={value}` |
+| first_name | string | /api/v2/customers?first_name={value} |
+| last_name | string | /api/v2/customers?last_name={value} |
+| company | string | /api/v2/customers?company={value} |
+| email | string | /api/v2/customers?email={value} |
+| phone | string | /api/v2/customers?phone={value} |
+| store_credit | string | /api/v2/customers?store_credit={value} |
+| customer_group_id | string | /api/v2/customers?customer_group_id={value} |
+| min_id | int | /api/v2/customers?min_id={value} |
+| max_id | int | /api/v2/customers?max_id={value} |
+| min_date_created | dateTime or date | /api/v2/customers?min_date_created={value} |
+| max_date_created | dateTime or date | /api/v2/customers?max_date_created={value} |
+| min_date_modified | dateTime or date | /api/v2/customers?min_date_modified={value} |
+| max_date_modified | dateTime or date | /api/v2/customers?max_date_modified={value} |
+| tax_exempt_category | date | /api/v2/customers?tax_exempt_category={value} |
 
 ### Pagination
 
@@ -55,8 +50,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/customers?page={number}` |
-| `Limit` | int | `/api/v2/customers?limit={count}` |
+| Page | int | /api/v2/customers?page={number} |
+| Limit | int | /api/v2/customers?limit={count} |
 
 ```json
 [
@@ -98,8 +93,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
       "resource": "/customers/2/addresses"
     }
   }
-]
-```
+]```
+
 ## Get a Customer
 
 Gets a customer.
@@ -128,8 +123,8 @@ Gets a customer.
     "url": "https://store-bwvr466.mybigcommerce.com/api/v2/customers/1/addresses.json",
     "resource": "/customers/1/addresses"
   }
-}
-```
+}```
+
 
 ## Get a Count of Customers
 
@@ -143,8 +138,8 @@ Gets a count of customers.
 ```json
 {
   "count": 3
-}
-```
+}```
+
 ## Create a Customer
 
 Creates a new customer.
@@ -159,35 +154,35 @@ Creates a new customer.
 
 The following properties of the customer are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `date_created`
-*   `date_modified`
-*   `addresses`
+*   id
+*   date_created
+*   date_modified
+*   addresses
 
 ### Requirements
 
 The following properties of the customer are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `first_name`
-*   `last_name`
-*   `email`
+*   first_name
+*   last_name
+*   email
 
 ### Notes
 
 The `_authentication` object exposes functionality associated with the customer’s ability to log in to the store. All properties of the `_authentication` object are optional.
 
-When the `_authentication` object is not supplied with a create request, then a new password is automatically generated for the customer.
+When the `_authentication` object is not supplied with an update request, then the existing customer password remains the same.
 
 ### Updating Passwords
 
-To manually update a customer password in the same way as the Control Panel, supply a value for the `password` field:
+To manually update a customer password in the same way as the Control Panel, supply a value for the password field:
 ```curl
 {
     "_authentication": {
         "password": "12w69Y217PYR96J"
     }
-}
-```
+}```
+
 
 ### Confirming Passwords
 
@@ -199,20 +194,20 @@ An additional optional `password_confirmation` field can also be sent, providing
        "password": "12w69Y217PYR96J",
        "password_confirmation": "12w69Y217PYR96J"
     }
-}
-```
+}```
+
 
 ### Forcing Password Resets
 
-To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of `true`, as shown here:
+To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of true, as shown here:
 
 ```curl
 {
     "_authentication": {
         "force_reset": true
     }
-}
-```
+}```
+
 
 ## Update a Customer
 
@@ -228,10 +223,10 @@ Updates an existing customer.
 
 The following properties of the customer are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `date_created`
-*   `date_modified`
-*   `addresses`
+*   id
+*   date_created
+*   date_modified
+*   addresses
 
 ### Requirements
 
@@ -252,8 +247,8 @@ To manually update a customer password in the same way as the Control Panel, sup
     "_authentication": {
         "password": "12w69Y217PYR96J"
     }
-}
-```
+}```
+
 
 ### Confirming Passwords
 
@@ -265,20 +260,20 @@ An additional optional `password_confirmation` field can also be sent, providing
        "password": "12w69Y217PYR96J"
        "password_confirmation": "12w69Y217PYR96J"
     }
-}
-```
+}```
+
 
 ### Forcing Password Resets
 
-To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of `true`, as shown here:
+To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of true, as shown here:
 
 ```curl
 {
     "_authentication": {
         "force_reset": true
     }
-}
-```
+}```
+
 
 ## Delete a Customer
 

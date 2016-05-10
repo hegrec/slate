@@ -1,11 +1,8 @@
-## Groups of customers who share the same level of access and discounts at a store.
-
 |||
 |--|--|
 | **Manages** |
-| **OAuth Scopes** | `store_v2_customers`
-||`store_v2_customers_read_only`
-
+| **OAuth Scopes** | store_v2_customers
+||store_v2_customers_read_only
 
 ## Operations
 
@@ -22,9 +19,9 @@
 Gets the collection of customer groups. (Default sorting is by customer-group id, from lowest to highest.)
 
 *   [OAuth](#list-customer-groups-oauth)
->`GET /stores/{store_hash}/v2/customer_groups`
+>GET /stores/{store_hash}/v2/customer_groups
 *   [Basic Auth](#list-customer-groups-basic)
->`GET /api/v2/customer_groups`
+>GET /api/v2/customer_groups
 
 ### Filters
 
@@ -32,8 +29,8 @@ Filter parameters can be added to the URL query string to select specific custom
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `name` | string | `/api/v2/customer_groups?name={value}` |
-| `is_default` | boolean | `/api/v2/customer_groups?is_default={value}` |
+| name | string | /api/v2/customer_groups?name={value} |
+| is_default | boolean | /api/v2/customer_groups?is_default={value} |
 
 ### Pagination
 
@@ -41,8 +38,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/customer_groups?page={number}` |
-| `Limit` | int | `/api/v2/customer_groups?limit={count}` |
+| Page | int | /api/v2/customer_groups?page={number} |
+| Limit | int | /api/v2/customer_groups?limit={count} |
 
 ```json
 [
@@ -68,16 +65,16 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
     ]
   }
-]
-```
+]```
+
 ## Get a Customer Group
 
 Gets a customer group.
 
 *   [OAuth](#get-a-customer-group-oauth)
->`GET /stores/{store_hash}/v2/customer_groups/{id}`
+>GET /stores/{store_hash}/v2/customer_groups/{id}
 *   [Basic Auth](#get-a-customer-group-basic)
->`GET /api/v2/customer_groups/{id}`
+>GET /api/v2/customer_groups/{id}
 
 ```json
 {
@@ -94,32 +91,32 @@ Gets a customer group.
       "amount": "5.0000"
     }
   ]
-}
-```
+}```
+
 
 ## Get a Count of Customer Groups
 
 Gets a count of customer groups.
 
 *   [OAuth](#get-a-count-of-customer-groups-oauth)
->`GET /stores/{store_hash}/v2/customer_groups/count`
+>GET /stores/{store_hash}/v2/customer_groups/count
 *   [Basic Auth](#get-a-count-of-customer-groups-basic)
->`GET /api/v2/customer_groups/count`
+>GET /api/v2/customer_groups/count
 
 ```json
 {
   "count": 3
-}
-```
+}```
+
 
 ## Create a Customer Group
 
 Creates a new customer group.
 
 *   [OAuth](#create-a-customer-group-oauth)
->`POST /stores/{store_hash}/v2/customer_groups`
+>POST /stores/{store_hash}/v2/customer_groups
 *   [Basic Auth](#create-a-customer-group-basic)
->`POST /api/v2/customer_groups`
+>POST /api/v2/customer_groups
 
 ### Read-only Properties
 
@@ -129,7 +126,7 @@ The following properties of the customer group are read-only. If one or more of 
 
 The following properties of the customer group are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `name`
+*   name
 
 ### Notes
 
@@ -137,8 +134,8 @@ A minimal request requires only the customer group name:
 ```curl
 {
     "name": "Wholesale Customers"
-}
-```
+}```
+
 
 To assign all new customers to the group by default, set **is default** to true:
 
@@ -146,8 +143,8 @@ To assign all new customers to the group by default, set **is default** to true:
 {
     "name": "Retail Customers",
     "is_default": true
-}
-```
+}```
+
 
 To restrict customers in the group to only view and order products from a specific set of categories, provide a **category access** type:
 
@@ -158,8 +155,8 @@ To restrict customers in the group to only view and order products from a specif
         "type": "specific",
         "categories": [7, 12, 20]
     }
-}
-```
+}```
+
 
 To provide a 5% store-wide discount for customers in the group, provide a **discount rule** of type **all**:
 
@@ -172,17 +169,17 @@ To provide a 5% store-wide discount for customers in the group, provide a **disc
         "method": "percent",
         "amount": 5.00
     }]
-}
-```
+}```
+
 
 ## Update a Customer Group
 
 Updates an existing customer group.
 
 *   [OAuth](#update-a-customer-group-oauth)
->`PUT /stores/{store_hash}/v2/customer_groups/{id}`
+>PUT /stores/{store_hash}/v2/customer_groups/{id}
 *   [Basic Auth](#update-a-customer-group-basic)
->`PUT /api/v2/customer_groups/{id}`
+>PUT /api/v2/customer_groups/{id}
 
 ### Read-only Properties
 
@@ -218,7 +215,7 @@ The following request will remove any existing rules, and apply the new ones:
                 "amount": 12.00
             }
         ]
-    }
+}
 ```
 
 ## Delete a Customer Group
@@ -226,9 +223,9 @@ The following request will remove any existing rules, and apply the new ones:
 Deletes a customer group.
 
 *   [OAuth](#delete-a-customer-group-oauth)
->`DELETE /stores/{store_hash}/v2/customer_groups/{id}`
+>DELETE /stores/{store_hash}/v2/customer_groups/{id}
 *   [Basic Auth](#delete-a-customer-group-basic)
->`DELETE /api/v2/customer_groups/{id}`
+>DELETE /api/v2/customer_groups/{id}
 
 ### Notes
 
@@ -240,6 +237,6 @@ Deletes all customer groups in the store.
 
 
 *   [OAuth](#delete-all-customer-groups-oauth)
->`DELETE /stores/{store_hash}/v2/customer_groups`
+>DELETE /stores/{store_hash}/v2/customer_groups
 *   [Basic Auth](#delete-all-customer-groups-basic)
->`DELETE /api/v2/customer_groups`
+>DELETE /api/v2/customer_groups

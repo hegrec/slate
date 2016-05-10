@@ -2,10 +2,6 @@
 
 Postal address belonging to a Customer
 
-|||
-|---|---|
-| **Managed by** | [Customer Addresses Resource](/api/stores/v2/customers/addresses)
-
 ## Customer Addresss Object - Properties
 
 | Name | Type | Description |

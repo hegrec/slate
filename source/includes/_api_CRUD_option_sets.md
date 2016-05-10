@@ -1,12 +1,10 @@
-## A reusable set of option facets that can be applied to products.
-
 |||
 |---|---|
 | Manages |
 | OAuth Scopes | `store_v2_products`
 ||`store_v2_products_read_only`
 
-## Operations
+## Option Set Operations
 
 *   [List Option Sets](#list-option-sets)
 *   [Get an Option Set](#get-an-option-set)
@@ -31,7 +29,7 @@ Filter parameters can be added to the URL query string to select specific option
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `name` | string | `/api/v2/option_sets?name={value}` |
+| name | string | /api/v2/option_sets?name={value} |
 
 ### Pagination
 
@@ -39,8 +37,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/option_sets?page={number}` |
-| `Limit` | int | `/api/v2/option_sets?limit={count}` |
+| Page | int | /api/v2/option_sets?page={number} |
+| Limit | int | /api/v2/option_sets?limit={count} |
 
 ```json
 [
@@ -111,14 +109,14 @@ Creates a new Option set.
 
 The following properties of the option set are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `options`
+*   id
+*   options
 
 ### Requirements
 
 The following properties of the option set are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `name`
+*   name
 
 ```curl
 {
@@ -151,14 +149,14 @@ Updates an existing option set.
 
 The following properties of the option set are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `options`
+*   id
+*   options
 
 ### Requirements
 
 The following properties of the option set are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `name`
+*   name
 
 ```curl
 {

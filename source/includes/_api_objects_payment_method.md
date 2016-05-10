@@ -1,9 +1,5 @@
 # Payment Methods
 
-|||
-|---|---|
-| **Managed by** | [Payment Methods Resource](/api/stores/v2/payments/methods)
-
 ## Payment Method Object - Properties
 
 | Name | Type | Description |

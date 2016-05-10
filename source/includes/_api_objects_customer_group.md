@@ -2,10 +2,6 @@
 
 Grouping of customers who share the same level of access and discounts at a store
 
-|||
-|---|---|
-| **Managed by** | [Customer Groups Resource](/api/stores/v2/customer_groups)
-
 ## Customer Group - Properties
 
 | Name | Type | Description |

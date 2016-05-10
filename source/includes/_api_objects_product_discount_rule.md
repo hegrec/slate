@@ -1,9 +1,5 @@
 # Bulk Pricing
 
-|||
-|---|---|
-| Managed by | [Bulk Pricing Rules Resource](/api/stores/v2/products/discount_rules)
-
 ## Bulk Pricing Object - Properties
 
 | Name | Type | Description |

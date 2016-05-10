@@ -1,10 +1,6 @@
 # Coupons
 
-Applies a category or product discount to an order for customers who enter a given code.
-
-|||
-|---|---|
-| **Managed by** | [Coupons Resource](/api/stores/v2/coupons)
+Category or product discounts that can be applied to orders for customers who enter a given code.
 
 ## Coupon Object - Properties
 

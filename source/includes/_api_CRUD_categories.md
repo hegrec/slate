@@ -1,4 +1,10 @@
-## Operations
+|||
+|---|---|
+| **Manages** |
+| **OAuth Scopes** | `store_v2_products`
+||`store_v2_products_read_only`
+
+## Category Operations
 
 *   [List Categories](#list-categories)
 *   [Get a Category](#get-a-category)
@@ -24,11 +30,11 @@ Filter parameters can be added to the URL query string to select specific catego
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `parent_id` | string | `/api/v2/categories?parent_id={value}` |
-| `name` | string | `/api/v2/categories?name={value}` |
-| `is_visible` | string | `/api/v2/categories?is_visible={value}` |
-| `min_id` | int | `/api/v2/categories?min_id={value}` |
-| `max_id` | int | `/api/v2/categories?max_id={value}` |
+| parent_id | string | /api/v2/categories?parent_id={value} |
+| name | string | /api/v2/categories?name={value} |
+| is_visible | string | /api/v2/categories?is_visible={value} |
+| min_id | int | /api/v2/categories?min_id={value} |
+| max_id | int | /api/v2/categories?max_id={value} |
 
 ### Pagination
 
@@ -36,8 +42,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/categories?page={number}` |
-| `Limit` | int | `/api/v2/categories?limit={count}` |
+| Page | int | /api/v2/categories?page={number} |
+| Limit | int | /api/v2/categories?limit={count} |
 
 ```json
 [
@@ -59,8 +65,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
     "search_keywords": "",
     "url": "/shop-mac/"
   }
-]
-```
+]```
+
 
 ## Get a Category
 
@@ -90,8 +96,8 @@ Gets a single category.
   "is_visible": true,
   "search_keywords": "",
   "url": "/xmen-toys/"
-}
-```
+}```
+
 
 ## Get a Count of Categories
 
@@ -105,8 +111,8 @@ Gets a count of the total number of categories in the store.
 ```json
 {
   "count": 10
-}
-```
+}```
+
 
 ## Create a Category
 
@@ -121,26 +127,26 @@ Creates a new category.
 
 The following properties of the category are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `parent_category_list`
+*   id
+*   parent_category_list
 
 ### Requirements
 
 The following properties of the category are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `name`
+*   name
 
 ### Notes
 
-To maximize system performance, Bigcommerce caps the number of categories that can be added to a store at 16,000. If your POST causes the store to exceed the maximum of 16,000 categories, Bigcommerce will return a 403 error.
+To maximize system performance, Bigcommerce caps the number of categories that can be added to a store at 16,000. If your `POST` causes the store to exceed the maximum of 16,000 categories, Bigcommerce will return a 403 error.
 
 In addition, Bigcommerce caps the total number of parent categories at seven. If your `POST` includes the ID of a parent category in the `parent_id` field, Bigcommerce will check that parent category and its parent and so on to determine the total number of parent categories. If your `POST` would cause the total number of parent categories to exceed seven, Bigcommerce will return a 403 error.
 
 ```curl
 {
   "name": "Xmen toys"
-}
-```
+}```
+
 
 ```json
 {
@@ -161,8 +167,8 @@ In addition, Bigcommerce caps the total number of parent categories at seven. If
   "is_visible": true,
   "search_keywords": "",
   "url": "/xmen-toys/"
-}
-```
+}```
+
 ## Update a Category
 
 Updates an existing category.
@@ -176,8 +182,8 @@ Updates an existing category.
 
 The following properties of the category are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `parent_category_list`
+*   id
+*   parent_category_list
 
 ### Requirements
 
@@ -206,8 +212,8 @@ To maximize system performance, Bigcommerce caps the total number of parent cate
   "is_visible": true,
   "search_keywords": "",
   "url": "/xmen-toys/"
-}
-```
+}```
+
 
 ## Delete a Category
 
@@ -230,4 +236,4 @@ Deletes all the categories in the store.
 
 ### Notes
 
->The DELETE all categories operation will not succeed unless the store has zero products. If any products in the store belong to any categories, the entire operation will fail. Therefore, if you really want to delete all the categories of the store, you must first delete all of the products in the store.
+>The `DELETE` all categories operation will not succeed unless the store has zero products. If any products in the store belong to any categories, the entire operation will fail. Therefore, if you really want to delete all the categories of the store, you must first delete all of the products in the store.

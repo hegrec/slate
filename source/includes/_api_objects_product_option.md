@@ -1,9 +1,5 @@
 # Product Options
 
-|||
-|---|---|
-| Managed by | [Product Options Resource](/api/stores/v2/products/options)
-
 ## Product Option Object - Properties
 
 | Name | Type | Description |

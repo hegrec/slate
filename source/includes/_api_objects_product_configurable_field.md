@@ -1,9 +1,5 @@
 # Configurable Fields
 
-|||
-|---|---|
-| Managed by | [Configurable Fields Resource](/api/stores/v2/products/configurable_fields)
-
 ## Configureable Field - Properties
 
 | Name | Type | Description |

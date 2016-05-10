@@ -2,10 +2,6 @@
 
 Gift certificates available to offer to a store's customers.
 
-|||
-|---|---|
-| Managed by | [Gift Certificate Resource](/api/stores/v2/gift_certificate)|
-
 ## Gift Certificate Object - Properties
 
 | Name | Type | Description |

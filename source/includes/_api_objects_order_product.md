@@ -2,10 +2,6 @@
 
 Product line item belonging to an order
 
-|||
-|---|---|
-| **Managed by** | [Order Products Resource](/api/stores/v2/orders/products)
-
 ## Order Product Object - Properties
 
 | Name | Type | Description |

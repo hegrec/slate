@@ -1,9 +1,5 @@
 # Custom Fields
 
-|||
-|---|---|
-| Managed by | [Custom Fields Resource](/api/stores/v2/products/custom_fields)
-
 ## Custom Field Object - Properties
 
 | Name | Type | Description |

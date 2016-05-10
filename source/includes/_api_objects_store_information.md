@@ -2,10 +2,6 @@
 
 Profile of an individual store.
 
-|||
-|---|---|
-| Managed by | [Store Information Resource](/api/stores/v2/store_information)
-
 ## Store Information Object - Properties
 
 | Name | Type | Description |

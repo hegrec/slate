@@ -1,9 +1,5 @@
 # Google Product Search Mappings
 
-|||
-|---|---|
-| Managed by | [Google Product Search Mappings Resource](/api/stores/v2/products/googleproductsearch)
-
 ## Google Product Search Mapping Object - Properties
 
 | Name | Type | Description |

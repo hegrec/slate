@@ -1,9 +1,5 @@
 # Order Messages
 
-|||
-|---|---|
-|**Managed by** |[Order Messages Resource](/api/stores/v2/orders/messages)
-
 ## Order Message Object - Properties
 
 | Name | Type | Description |

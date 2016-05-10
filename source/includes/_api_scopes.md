@@ -22,6 +22,7 @@ All OAuth scopes except **default** have **read_only** scopes which allow only *
 |||[tax_classes](/api/stores/v2/tax_classes) |
 | Marketing | **store_v2_marketing**|[coupons](/api/stores/v2/coupons) |
 ||**store_v2_marketing_read_only** | |
+| | | [gift_certificates](/api/stores/v2/gift_certificates)|
 | Orders | **store_v2_orders**| [orders](/api/stores/v2/orders) |
 ||**store_v2_orders_read_only** | [orders/{id}/coupons](/api/stores/v2/orders/coupons)|
 |||[orders/{id}/messages](/api/stores/v2/orders/messages) |
@@ -36,14 +37,14 @@ All OAuth scopes except **default** have **read_only** scopes which allow only *
 |||[products/{id}/configurable_fields](/api/stores/v2/products/configurable_fields) |
 |||[products/{id}/custom_fields](/api/stores/v2/products/custom_fields) |
 |||[products/{id}/googleproductsearch](/api/stores/v2/products/googleproductsearch) |
-|||[options](/api/stores/v2/options) |
-|||[option_sets](/api/stores/v2/option_sets) |
-|||[option_sets/{id}/options](/api/stores/v2/option_sets/options) |
-|||[options/{id}/values](/api/stores/v2/options/values) |
-|||[products](/api/stores/v2/products) |
-|||[products/{id}/images](/api/stores/v2/products/images) |
-|||[products/{id}/options](/api/stores/v2/products/options) |
-|||[products/{id}/reviews](/api/stores/v2/products/reviews) |
-|||[products/{id}/rules](/api/stores/v2/products/rules) |
-|||[products/{id}/videos](/api/v2/#products-videos) |
-|||[products/{id}/skus](/api/v2/#products-skus) |
+|||[options](/api/v2/products/#product-options) |
+|||[option_sets](/api/v2/products/#option-sets) |
+|||[option_sets/{id}/options](/api/v2/products/#option-sets-options) |
+|||[options/{id}/values](/api/v2/products/#product-option-values) |
+|||[products](/api/v2/products) |
+|||[products/{id}/images](/api/v2/products/#product-images) |
+|||[products/{id}/options](/api/v2/products/#product-options) |
+|||[products/{id}/reviews](/api/v2/products/#product-reviews) |
+|||[products/{id}/rules](/api/v2/products/#product-rules) |
+|||[products/{id}/videos](/api/v2/products/#products-videos) |
+|||[products/{id}/skus](/api/v2/products/#product-skus) |

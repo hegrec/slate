@@ -2,10 +2,6 @@
 
 A content entry in the store’s blog
 
-|||
-|---|---|
-| Managed by | [Blog Posts Resource](/api/stores/v2/blog/posts)
-
 ## Blog Post Object - Properties
 
 | Name | Type | Description |

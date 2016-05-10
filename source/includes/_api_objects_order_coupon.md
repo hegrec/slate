@@ -2,10 +2,6 @@
 
 Coupon code applied to an order
 
-|||
-|---|---|
-| **Managed by** | [Order Coupons Resource](/api/stores/v2/orders/coupons)
-
 ## Order Coupon Object - Properties
 
 | Name | Type | Description |

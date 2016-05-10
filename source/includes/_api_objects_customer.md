@@ -2,10 +2,6 @@
 
 Identity and account details for customers shopping on Bigcommerce stores
 
-|||
-|---|---|
-| **Managed by** | [Customers Resource](/api/stores/v2/customers)
-
 ## Customer Object - Properties
 
 | Name | Type | Description |

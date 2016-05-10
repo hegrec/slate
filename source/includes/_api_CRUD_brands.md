@@ -23,9 +23,9 @@ Filter parameters can be added to the URL query string to select specific brands
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `name` | string | `/api/v2/brands?name={value}` |
-| `min_id` | int | `/api/v2/brands?min_id={value}` |
-| `max_id` | int | `/api/v2/brands?max_id={value}` |
+| name | string | /api/v2/brands?name={value} |
+| min_id | int | /api/v2/brands?min_id={value} |
+| max_id | int | /api/v2/brands?max_id={value} |
 
 ### Pagination
 
@@ -33,8 +33,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/brands?page={number}` |
-| `Limit` | int | `/api/v2/brands?limit={count}` |
+| Page | int | /api/v2/brands?page={number} |
+| Limit | int | /api/v2/brands?limit={count} |
 
 ```json
 [
@@ -56,8 +56,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
     "image_file": "",
     "search_keywords": ""
   }
-]
-```
+]```
+
 
 ## Get a Brand
 
@@ -77,8 +77,8 @@ Gets a brand.
   "meta_description": "",
   "image_file": "",
   "search_keywords": ""
-}
-```
+}```
+
 
 ## Get a Count of Brands
 
@@ -92,8 +92,8 @@ Returns the total number of brands in the store.
 ```json
 {
   "count": 25
-}
-```
+}```
+
 
 ## Create a Brand
 
@@ -109,13 +109,13 @@ Creates a new brand.
 
 The following properties of the brand are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
+*   id
 
 ### Requirements
 
 The following properties of the brand are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `name`
+*   name
 
 ### Notes
 
@@ -125,8 +125,8 @@ To maximize system performance, Bigcommerce caps the number of brands that can b
 {
   "name": "Xmen",
   "page_title": "X men brand"
-}
-```
+}```
+
 
 ```json
 {
@@ -137,8 +137,8 @@ To maximize system performance, Bigcommerce caps the number of brands that can b
   "meta_description": null,
   "image_file": "",
   "search_keywords": ""
-}
-```
+}```
+
 
 ## Update a Brand
 
@@ -153,7 +153,7 @@ Updates an existing brand.
 
 The following properties of the brand are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
+*   id
 
 ### Requirements
 
@@ -168,8 +168,8 @@ The following properties of the brand are required. The request won’t be fulfi
   "meta_description": null,
   "image_file": "t/apirmzk0a__43675.jpg",
   "search_keywords": "xmen, awesomeness"
-}
-```
+}```
+
 
 ## Delete a Brand
 

@@ -4,9 +4,9 @@
 
 Retrieves the gift certificates available. (Default sorting is by gift-certificate id, from lowest to highest.)
 
-`GET /stores/{store_hash}/v2/gift_certificates`
+>`GET /stores/{store_hash}/v2/gift_certificates`
 
-`GET /api/v2/gift_certificates`
+>`GET /api/v2/gift_certificates`
 
 ### Filters
 
@@ -14,20 +14,20 @@ Filter parameters can be added to the URL query string to select specific gift_c
 
 | Parameter    | Type   | Example                                        |
 | ------------ | ------ | ---------------------------------------------- |
-| `min_id`     | int    | `/api/v2/gift_certificates?min_id={value}`     |
-| `max_id`     | int    | `/api/v2/gift_certificates?max_id={value}`     |
-| `code`       | string | `/api/v2/gift_certificates?code={value}`       |
-| `to_name`    | string | `/api/v2/gift_certificates?to_name={value}`    |
-| `to_email`   | string | `/api/v2/gift_certificates?to_email={value}`   |
-| `from_name`  | string | `/api/v2/gift_certificates?from_name={value}`  |
-| `from_email` | string | `/api/v2/gift_certificates?from_email={value}` |
+| min_id     | int    | /api/v2/gift_certificates?min_id={value}     |
+| max_id     | int    | /api/v2/gift_certificates?max_id={value}     |
+| code       | string | /api/v2/gift_certificates?code={value}       |
+| to_name    | string | /api/v2/gift_certificates?to_name={value}    |
+| to_email   | string | /api/v2/gift_certificates?to_email={value}   |
+| from_name  | string | /api/v2/gift_certificates?from_name={value}  |
+| from_email | string | /api/v2/gift_certificates?from_email={value} |
 
 Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn't provided, up to 50 gift_certificates are returned by default.
 
 | Parameter | Type | Example                                   |
 | --------- | ---- | ----------------------------------------- |
-| `page`    | int  | `/api/v2/gift_certificates?page={number}` |
-| `limit`   | int  | `/api/v2/gift_certificates?limit={count}` |
+| page    | int  | /api/v2/gift_certificates?page={number} |
+| limit   | int  | /api/v2/gift_certificates?limit={count} |
 
 ```json
     {
@@ -90,9 +90,9 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 Retrieves a specified gift certificate.
 
-`GET /stores/{store_hash}/v2/gift_certificates/{id}`
+>`GET /stores/{store_hash}/v2/gift_certificates/{id}`
 
-`GET /api/v2/gift_certificates/{id}`
+>`GET /api/v2/gift_certificates/{id}`
 
 ```json
     {
@@ -119,9 +119,9 @@ Retrieves a specified gift certificate.
 
 Creates a new gift certificate.
 
-`POST /stores/{store_hash}/v2/gift_certificates`
+>`POST /stores/{store_hash}/v2/gift_certificates`
 
-`POST /api/v2/gift_certificates`
+>`POST /api/v2/gift_certificates`
 
 ### Read-only Properties
 
@@ -131,11 +131,11 @@ The following properties of the gift certificate are read-only. If one or more o
 
 The following properties of the gift certificate are required. The request won't be fulfilled unless these properties are valid.
 
-* `to_name`
-* `to_email`
-* `from_name`
-* `from_email`
-* `amount`
+* to_name
+* to_email
+* from_name
+* from_email
+* amount
 
 ### Notes
 
@@ -143,20 +143,20 @@ When a gift certificate is created through the API, no email notification is tri
 
 The gift certificate's status can be one of the following:
 
-* `pending`
-* `active`
-* `disabled`
-* `expired`
+* pending
+* active
+* disabled
+* expired
 
 The gift certificate's template can be one of the following:
 
-* `Birthday`
-* `Boy`
-* `Celebration`
-* `Christmas`
-* `General`
-* `Girl`
-* `{blank}`
+* Birthday
+* Boy
+* Celebration
+* Christmas
+* General
+* Girl
+* {blank}
 
 ```curl
     {
@@ -195,9 +195,9 @@ The gift certificate's template can be one of the following:
 
 Updates an existing gift certificate.
 
-`PUT /stores/{store_hash}/v2/gift_certificates`
+>`PUT /stores/{store_hash}/v2/gift_certificates`
 
-`PUT /api/v2/gift_certificates`
+>`PUT /api/v2/gift_certificates`
 
 ### Read-only Properties
 
@@ -234,14 +234,14 @@ The following properties of the gift certificate are read-only. If one or more o
 
 Deletes a specified gift certificate. (If successful, this will typically return a "204 No Content".)
 
-`DELETE /stores/{store_hash}/v2/gift_certificates/{id}`
+>`DELETE /stores/{store_hash}/v2/gift_certificates/{id}`
 
-`DELETE /api/v2/gift_certificates/{id}`
+>`DELETE /api/v2/gift_certificates/{id}`
 
 ## Delete All Gift Certificates
 
 Deletes all gift certificates associated with the store. (If successful, this will typically return a "204 No Content".)
 
-`DELETE /stores/{store_hash}/v2/gift_certificates`
+>`DELETE /stores/{store_hash}/v2/gift_certificates`
 
-`DELETE /api/v2/gift_certificates` 
+>`DELETE /api/v2/gift_certificates` 

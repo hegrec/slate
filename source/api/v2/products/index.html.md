@@ -43,5 +43,3 @@ includes:
 
 search: true
 ---
-
-# Products

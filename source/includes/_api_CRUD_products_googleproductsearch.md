@@ -1,8 +1,8 @@
 |||
 |---|---|
 | **Manages** |
-| **OAuth Scopes** | `store_v2_products`
-||`store_v2_products_read_only`
+| **OAuth Scopes** | store_v2_products
+||store_v2_products_read_only
 
 ## Operations
 

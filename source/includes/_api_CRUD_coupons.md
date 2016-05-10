@@ -1,13 +1,10 @@
-## Category or product discounts that can be applied to orders for customers who enter a given code.
-
 |||
 |---|---|
 | **Manages** |
 | **OAuth Scopes** | `store_v2_marketing`
 ||`store_v2_marketing_read_only`
 
-
-## Operations
+## Coupon Operations
 
 *   [List Coupons](#list-coupons)
 *   [Get a Coupon](#get-a-coupon)
@@ -33,12 +30,12 @@ Filter parameters can be added to the URL query string to select specific coupon
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `id` | string | `/api/v2/coupons?id={value}` |
-| `code` | string | `/api/v2/coupons?code={value}` |
-| `name` | string | `/api/v2/coupons?name={value}` |
-| `type` | string | `/api/v2/coupons?type={value}` |
-| `min_id` | int | `/api/v2/coupons?min_id={value}` |
-| `max_id` | int | `/api/v2/coupons?max_id={value}` |
+| id | string | /api/v2/coupons?id={value} |
+| code | string | /api/v2/coupons?code={value} |
+| name | string | /api/v2/coupons?name={value} |
+| type | string | /api/v2/coupons?type={value} |
+| min_id | int | /api/v2/coupons?min_id={value} |
+| max_id | int | /api/v2/coupons?max_id={value} |
 
 ### Pagination
 
@@ -46,8 +43,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/coupons?page={number}` |
-| `Limit` | int | `/api/v2/coupons?limit={count}` |
+| Page | int | /api/v2/coupons?page={number} |
+| Limit | int | /api/v2/coupons?limit={count} |
 
 ```json
 [
@@ -239,18 +236,18 @@ Creates a new coupon.
 
 The following properties of the coupon are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `num_uses`
+*   id
+*   num_uses
 
 ### Requirements
 
 The following properties of the coupon are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `name`
-*   `code`
-*   `type`
-*   `amount`
-*   `applies_to`
+*   name
+*   code
+*   type
+*   amount
+*   applies_to
 
 ### Notes
 
@@ -315,8 +312,8 @@ Updates an existing coupon.
 
 The following properties of the coupon are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `num_uses`
+*   id
+*   num_uses
 
 ### Requirements
 

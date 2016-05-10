@@ -2,10 +2,6 @@
 
 A 301 redirect, mapping from a given URL path to another URL
 
-|||
-|---|---|
-| **Managed by** | [Redirects Resource](/api/stores/v2/redirects)|
-
 ## Redirect Object - Properties
 
 | Name | Type | Description |

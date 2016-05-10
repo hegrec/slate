@@ -1,11 +1,9 @@
-## States and subdivisions belonging to countries.
 |||
 |---|---|
 | **Manages** |
 | **OAuth Scopes** | `default`
 
-
-## Operations
+## State Operations
 
 *   [List States](#list-states)
 *   [Get a State](#get-a-state)
@@ -26,8 +24,8 @@ Filter parameters can be added to the URL query string to select specific states
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `state` | string | `/api/v2/countries/{country_id}/states?state={value}` |
-| `state_abbreviation` | string | `/api/v2/countries/{country_id}/states?state_abbreviation={value}` |
+| state | string | /api/v2/countries/{country_id}/states?state={value} |
+| state_abbreviation | string | /api/v2/countries/{country_id}/states?state_abbreviation={value} |
 
 ### Pagination
 
@@ -35,8 +33,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/countries/{country_id}/states?page={number}` |
-| `Limit` | int | `/api/v2/countries/{country_id}/states?limit={count}` |
+| Page | int | /api/v2/countries/{country_id}/states?page={number} |
+| Limit | int | /api/v2/countries/{country_id}/states?limit={count} |
 
 ```json
 [

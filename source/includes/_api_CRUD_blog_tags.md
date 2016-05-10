@@ -1,12 +1,14 @@
-## Index of tags used on the store’s blog.
+# Blog Tags
+
+Index of tags used on the store’s blog.
+
 |||
 |---|---|
 | **Manages** |
 | **OAuth Scopes** | `store_v2_content`|
 ||`store_v2_content_read_only`|
 
-
-## Operations
+## Blog Tag Operations
 
 *   [List Tags](#list-tags)
 

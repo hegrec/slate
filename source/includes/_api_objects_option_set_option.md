@@ -1,8 +1,6 @@
 # Product Option Set Options
 
-|||
-|---|---|
-| Managed by | [Option Set Options Resource](/api/stores/v2/option_sets/options)
+Options belonging to an option set.
 
 ## Option Set Option Object - Properties
 

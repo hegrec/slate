@@ -1,9 +1,5 @@
 # Product Rules
 
-|||
-|---|---|
-| Managed by | [Product Rules Resource](/api/stores/v2/products/rules)
-
 ## Product Rule Object - Properties
 
 | Name | Type | Description |

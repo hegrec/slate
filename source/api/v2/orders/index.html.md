@@ -2,10 +2,6 @@
 title: BigCommerce API Documentation
 layout: "twocolumn"
 
-language_tabs:
-  - curl: Request
-  - json: Response
-
 toc_footers:
   - <a href="/">Home</a>
   - <a href='/api/v2/'>API - Getting Started</a>
@@ -34,5 +30,3 @@ includes:
 
 search: true
 ---
-
-#Orders

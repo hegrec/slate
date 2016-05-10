@@ -1,5 +1,3 @@
-## Values that can be selected for an option.
-
 |||
 |---|---|
 | Manages |
@@ -7,7 +5,7 @@
 ||`store_v2_products_read_only`
 
 
-## Operations
+## Option Value Operations
 
 *   [List Option Values](#list-option-values)
 *   [Get an Option Value](#get-an-option-value)
@@ -32,8 +30,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/options/{option_id}/values?page={number}` |
-| `Limit` | int | `/api/v2/options/{option_id}/values?limit={count}` |
+| Page | int | /api/v2/options/{option_id}/values?page={number} |
+| Limit | int | /api/v2/options/{option_id}/values?limit={count} |
 
 ```json
 [
@@ -90,21 +88,21 @@ Creates a new option value.
 
 The following properties of the option value are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `option_id`
+*   id
+*   option_id
 
 ### Requirements
 
 The following properties of the option value are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `label`
-*   `value`
+*   label
+*   value
 
 ### Notes
 
 To maximize system performance, Bigcommerce caps the total number of values per option at 250. IF the option has 250 values and you try to create another one, Bigcommerce will return a 403 error.
 
-When you POST an **_is_default_** property of _true_, all other option values on the parent option will have their **_is_default_** property set to _false_.
+When you POST an `is_default`property of `true`, all other option values on the parent option will have their `is_default` property set to `false`.
 
 ```curl
 {
@@ -139,8 +137,8 @@ Updates an existing option value.
 
 The following properties of the option value are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `option_id`
+*   id
+*   option_id
 
 ### Requirements
 
@@ -148,7 +146,7 @@ The following properties of the option value are required. The request won’t b
 
 ### Notes
 
-When you PUT an **_is_default_** property of _true_, all other option values on the parent option will have their **_is_default_** property set to _false_.
+When you PUT an `is_default` property of `true`, all other option values on the parent option will have their `is_default` property set to `false`.
 
 ```curl
 {
@@ -194,5 +192,5 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/options/{option_id}/values?page={number}` |
-| `Limit` | int | `/api/v2/options/{option_id}/values?limit={count}` |
+| Page | int | /api/v2/options/{option_id}/values?page={number} |
+| Limit | int | /api/v2/options/{option_id}/values?limit={count} |

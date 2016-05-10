@@ -2,10 +2,6 @@
 
 The taxes object provides information about each tax applied to an order, which may be useful for reporting purposes. All values are read-only.
 
-|||
-|---|---|
-| **Managed by** | [Order Taxes Resource](/api/stores/v2/orders/taxes)
-
 ## Order Tax Object - Properties
 
 | Name | Type | Description |

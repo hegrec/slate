@@ -1,8 +1,6 @@
 # Product Option Values
 
-|||
-|---|---|
-| Managed by | [Option Values Resource](/api/stores/v2/options/values)
+Values that can be selected for an option.
 
 ## Product Object Value Object - Properties
 

@@ -2,10 +2,6 @@
 
 A country or territory, identifiable by an ISO 3166 country code
 
-|||
-|----|----|
-| **Managed by** | [Countries Resource](/api/stores/v2/countries)
-
 ## Country Object - Properties
 
 | Name | Type | Description |

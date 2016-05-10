@@ -2,10 +2,6 @@
 
 Customer shipping address belonging to an order
 
-|||
-|---|---|
-| **Managed by** | [Order Shipping Addresses Resource](/api/stores/v2/orders/shipping_addresses)
-
 ## Order Shipping Address Object - Properties
 
 | Name | Type | Description |

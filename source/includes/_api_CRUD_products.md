@@ -5,8 +5,8 @@ Catalog of saleable items in the store.
 |||
 |---|---|
 | **Manages** | [Product Object](/api/?BasicAuth#product-properties) |
-| **OAuth Scopes** | `store_v2_products` |
-| |`store_v2_products_read_only`
+| **OAuth Scopes** | store_v2_products |
+| |store_v2_products_read_only
 
 **Operations**
 
@@ -274,8 +274,8 @@ Gets the collection of products. (Default sorting is by product id, from lowest 
 
 |||
 |---|---|
-| Basic Auth: | `GET /api/v2/products` |
-| OAuth: | `GET /stores/{store_hash}/v2/products` |
+| Basic Auth: | GET /api/v2/products |
+| OAuth: | GET /stores/{store_hash}/v2/products |
 
 ### Filters
 
@@ -283,32 +283,32 @@ Filter parameters can be added to the URL query string to select specific produc
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `min_id` | int | `/api/v2/products?min_id={value}` |
-| `max_id` | int | `/api/v2/products?max_id={value}` |
-| `name` | string | `/api/v2/products?name={value}` |
-| `keyword_filter` | string | `/api/v2/products?keyword_filter={value}` |
-| `description` | string | `/api/v2/products?description={value}` |
-| `sku` | string | `/api/v2/products?sku={value}` |
-| `condition` | string | `/api/v2/products?condition={value}` |
-| `availability` | string | `/api/v2/products?availability={value}` |
-| `brand_id` | string | `/api/v2/products?brand_id={value}` |
-| `min_date_created` | dateTime or date | `/api/v2/products?min_date_created={value}` |
-| `max_date_created` | dateTime or date | `/api/v2/products?max_date_created={value}` |
-| `min_date_modified` | dateTime or date | `/api/v2/products?min_date_modified={value}` |
-| `max_date_modified` | dateTime or date | `/api/v2/products?max_date_modified={value}` |
-| `min_date_last_imported` | date | `/api/v2/products?min_date_last_imported={value}` |
-| `max_date_last_imported` | date | `/api/v2/products?max_date_last_imported={value}` |
-| `min_price` | decimal | `/api/v2/products?min_price={value}` |
-| `max_price` | decimal | `/api/v2/products?max_price={value}` |
-| `min_number_sold` | int | `/api/v2/products?min_number_sold={value}` |
-| `max_number_sold` | int | `/api/v2/products?max_number_sold={value}` |
-| `is_visible` | string | `/api/v2/products?is_visible={value}` |
-| `is_featured` | string | `/api/v2/products?is_featured={value}` |
-| `min_inventory_level` | int | `/api/v2/products?min_inventory_level={value}` |
-| `max_inventory_level` | int | `/api/v2/products?max_inventory_level={value}` |
-| `include_sku` | boolean | `/api/v2/products?include_sku={value}` |
-| `category` | string | `/api/v2/products?category={value}` |
-| `product_tax_code` | string | `/api/v2/products?product_tax_code={value}` |
+| min_id | int | /api/v2/products?min_id={value} |
+| max_id | int | /api/v2/products?max_id={value} |
+| name | string | /api/v2/products?name={value} |
+| keyword_filter | string | /api/v2/products?keyword_filter={value} |
+| description | string | /api/v2/products?description={value} |
+| sku | string | /api/v2/products?sku={value} |
+| condition | string | /api/v2/products?condition={value} |
+| availability | string | /api/v2/products?availability={value} |
+| brand_id | string | /api/v2/products?brand_id={value} |
+| min_date_created | dateTime or date | /api/v2/products?min_date_created={value} |
+| max_date_created | dateTime or date | /api/v2/products?max_date_created={value} |
+| min_date_modified | dateTime or date | /api/v2/products?min_date_modified={value} |
+| max_date_modified | dateTime or date | /api/v2/products?max_date_modified={value} |
+| min_date_last_imported | date | /api/v2/products?min_date_last_imported={value} |
+| max_date_last_imported | date | /api/v2/products?max_date_last_imported={value} |
+| min_price | decimal | /api/v2/products?min_price={value} |
+| max_price | decimal | /api/v2/products?max_price={value} |
+| min_number_sold | int | /api/v2/products?min_number_sold={value} |
+| max_number_sold | int | /api/v2/products?max_number_sold={value} |
+| is_visible | string | /api/v2/products?is_visible={value} |
+| is_featured | string | /api/v2/products?is_featured={value} |
+| min_inventory_level | int | /api/v2/products?min_inventory_level={value} |
+| max_inventory_level | int | /api/v2/products?max_inventory_level={value} |
+| include_sku | boolean | /api/v2/products?include_sku={value} |
+| category | string | /api/v2/products?category={value} |
+| product_tax_code | string | /api/v2/products?product_tax_code={value} |
 
 ### Pagination
 
@@ -316,8 +316,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/products?page={number}` |
-| `Limit` | int | `/api/v2/products?limit={count}` |
+| Page | int | /api/v2/products?page={number} |
+| Limit | int | /api/v2/products?limit={count} |
 
 ## Get a Product
 
@@ -449,8 +449,8 @@ Gets a product.
 
 |||
 |---|---|
-| Basic Auth: | `GET /api/v2/products/{id}` |
-| OAuth: | `GET /stores/{store_hash}/v2/products/{id}` |
+| Basic Auth: | GET /api/v2/products/{id} |
+| OAuth: | GET /stores/{store_hash}/v2/products/{id} |
 
 ## Get a Product Count
 
@@ -459,13 +459,12 @@ Gets a count of products.
 ```json
 {
   "count": 44
-}
-```
+}```
 
 |||
 |---|---|
-| Basic Auth: | `GET /api/v2/products/count` |
-| OAuth: | `GET /stores/{store_hash}/v2/products/count` |
+| Basic Auth: | GET /api/v2/products/count |
+| OAuth: | GET /stores/{store_hash}/v2/products/count |
 
 ### Filters
 
@@ -473,32 +472,32 @@ Filter parameters can be added to the URL query string to select specific produc
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `min_id` | int | `/api/v2/products?min_id={value}` |
-| `max_id` | int | `/api/v2/products?max_id={value}` |
-| `name` | string | `/api/v2/products?name={value}` |
-| `keyword_filter` | string | `/api/v2/products?keyword_filter={value}` |
-| `description` | string | `/api/v2/products?description={value}` |
-| `sku` | string | `/api/v2/products?sku={value}` |
-| `condition` | string | `/api/v2/products?condition={value}` |
-| `availability` | string | `/api/v2/products?availability={value}` |
-| `brand_id` | string | `/api/v2/products?brand_id={value}` |
-| `min_date_created` | date | `/api/v2/products?min_date_created={value}` |
-| `max_date_created` | date | `/api/v2/products?max_date_created={value}` |
-| `min_date_modified` | date | `/api/v2/products?min_date_modified={value}` |
-| `max_date_modified` | date | `/api/v2/products?max_date_modified={value}` |
-| `min_date_last_imported` | date | `/api/v2/products?min_date_last_imported={value}` |
-| `max_date_last_imported` | date | `/api/v2/products?max_date_last_imported={value}` |
-| `min_price` | decimal | `/api/v2/products?min_price={value}` |
-| `max_price` | decimal | `/api/v2/products?max_price={value}` |
-| `min_number_sold` | int | `/api/v2/products?min_number_sold={value}` |
-| `max_number_sold` | int | `/api/v2/products?max_number_sold={value}` |
-| `is_visible` | string | `/api/v2/products?is_visible={value}` |
-| `is_featured` | string | `/api/v2/products?is_featured={value}` |
-| `min_inventory_level` | int | `/api/v2/products?min_inventory_level={value}` |
-| `max_inventory_level` | int | `/api/v2/products?max_inventory_level={value}` |
-| `include_sku` | boolean | `/api/v2/products?include_sku={value}` |
-| `category` | string | `/api/v2/products?category={value}` |
-| `product_tax_code` | string | `/api/v2/products?product_tax_code={value}` |
+| min_id | int | /api/v2/products?min_id={value} |
+| max_id | int | /api/v2/products?max_id={value} |
+| name | string | /api/v2/products?name={value} |
+| keyword_filter | string | /api/v2/products?keyword_filter={value} |
+| description | string | /api/v2/products?description={value} |
+| sku | string | /api/v2/products?sku={value} |
+| condition | string | /api/v2/products?condition={value} |
+| availability | string | /api/v2/products?availability={value} |
+| brand_id | string | /api/v2/products?brand_id={value} |
+| min_date_created | date | /api/v2/products?min_date_created={value} |
+| max_date_created | date | /api/v2/products?max_date_created={value} |
+| min_date_modified | date | /api/v2/products?min_date_modified={value} |
+| max_date_modified | date | /api/v2/products?max_date_modified={value} |
+| min_date_last_imported | date | /api/v2/products?min_date_last_imported={value} |
+| max_date_last_imported | date | /api/v2/products?max_date_last_imported={value} |
+| min_price | decimal | /api/v2/products?min_price={value} |
+| max_price | decimal | /api/v2/products?max_price={value} |
+| min_number_sold | int | /api/v2/products?min_number_sold={value} |
+| max_number_sold | int | /api/v2/products?max_number_sold={value} |
+| is_visible | string | /api/v2/products?is_visible={value} |
+| is_featured | string | /api/v2/products?is_featured={value} |
+| min_inventory_level | int | /api/v2/products?min_inventory_level={value} |
+| max_inventory_level | int | /api/v2/products?max_inventory_level={value} |
+| include_sku | boolean | /api/v2/products?include_sku={value} |
+| category | string | /api/v2/products?category={value} |
+| product_tax_code | string | /api/v2/products?product_tax_code={value} |
 
 ### Notes
 
@@ -517,54 +516,54 @@ Creates a new product. The example request shows how to create a basic product b
     "categories": [18],
     "availability": "available",
     "weight": "0.5"
-}
-```
+}```
+
 |||
 |---|---|
-| Basic Auth: | `POST /api/v2/products` |
-| OAuth: | `POST /stores/{store_hash}/v2/products` |
+| Basic Auth: | POST /api/v2/products |
+| OAuth: | POST /stores/{store_hash}/v2/products |
 
 ### Read-only Properties
 
 The following properties of the product are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `calculated_price`
-*   `brand`
-*   `images`
-*   `discount_rules`
-*   `configurable_fields`
-*   `custom_fields`
-*   `videos`
-*   `skus`
-*   `rules`
-*   `option_set`
-*   `options`
-*   `tax_class`
+*   calculated_price
+*   brand
+*   images
+*   discount_rules
+*   configurable_fields
+*   custom_fields
+*   videos
+*   skus
+*   rules
+*   option_set
+*   options
+*   tax_class
 
 ### Requirements
 
 The following properties of the product are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `name`
-*   `price`
-*   `categories`
-*   `type`
-*   `availability`
-*   `weight`
+*   name
+*   price
+*   categories
+*   type
+*   availability
+*   weight
 
 ### Notes
 
-When the `is_visible` property is not provided, the product visibility is `false` by default.
+When the is_visible property is not provided, the product visibility is false by default.
 
-To make newly created products immediately visible on the storefront, you must set `is_visible` to `true` when you create the product.
+To make newly created products immediately visible on the storefront, you must set is_visible to true when you create the product.
 
-To maximize system performance, Bigcommerce caps the number of categories that a product can belong to at 1,000. If your `POST` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
+To maximize system performance, Bigcommerce caps the number of categories that a product can belong to at 1,000. If your POST includes an array of more than 1,000 categories ID values, Bigcommerce will return a 403 error.
 
-```json
+json
 403 Access Denied/Forbidden
-```
 
-If automatic tax is enabled on the store, the value of `tax_class_id` will have no effect on the calculation of taxes.
+
+If automatic tax is enabled on the store, the value of tax_class_id will have no effect on the calculation of taxes.
 
 ## Update a Product
 
@@ -572,32 +571,32 @@ Updates an existing product.
 
 |||
 |---|---|
-| Basic Auth: | `PUT /api/v2/products/{id}` |
-| OAuth: | `PUT /stores/{store_hash}/v2/products/{id}` |
+| Basic Auth: | PUT /api/v2/products/{id} |
+| OAuth: | PUT /stores/{store_hash}/v2/products/{id} |
 
 ### Read-only Properties
 
 The following properties of the product are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `rating_total`
-*   `rating_count`
-*   `number_sold`
-*   `date_created`
-*   `date_modified`
-*   `date_last_imported`
-*   `calculated_price`
-*   `brand`
-*   `images`
-*   `discount_rules`
-*   `configurable_fields`
-*   `custom_fields`
-*   `videos`
-*   `skus`
-*   `rules`
-*   `option_set`
-*   `options`
-*   `tax_class`
+*   id
+*   rating_total
+*   rating_count
+*   number_sold
+*   date_created
+*   date_modified
+*   date_last_imported
+*   calculated_price
+*   brand
+*   images
+*   discount_rules
+*   configurable_fields
+*   custom_fields
+*   videos
+*   skus
+*   rules
+*   option_set
+*   options
+*   tax_class
 
 ### Requirements
 
@@ -605,53 +604,53 @@ The following properties of the product are required. The request won’t be ful
 
 ### Notes
 
-To update a product, set one or more [product properties](/api/?javascript#product-properties) in the `PUT` request:
+To update a product, set one or more [product properties](/api/?javascript#product-properties) in the PUT request:
 
 ```json
 {
     "custom_url": "/plain-tshirt/",
     "is_visible": true
-}
-```
+}```
 
-For example, you can use a `PUT` to link a product to an option set:
+
+For example, you can use a PUT to link a product to an option set:
 
 ```curl
 {
     "option_set_id": 14
-}
-```
+}```
 
-Invalid property values will produce a `400 Bad Request` error response:
+
+Invalid property values will produce a 400 Bad Request error response:
 
 ```curl 
 {
     "condition": "Worn"
-}
-```
+}```
 
-```json 
+
+json 
 400 Bad Request
-```
 
-Trying to set read-only properties will also produce a `400 Bad Request` error response:
+
+Trying to set read-only properties will also produce a 400 Bad Request error response:
 
 ```curl
 {
     "number_sold": 99
-}
-```
+}```
+
 
 ```json 
-400 Bad Request
-```
-To maximize system performance, Bigcommerce caps the maximum number of categories to which a product can belong, at 1,000. If your `PUT` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
+400 Bad Request```
+
+To maximize system performance, Bigcommerce caps the maximum number of categories to which a product can belong, at 1,000. If your PUT includes an array of more than 1,000 categories ID values, Bigcommerce will return a 403 error.
 
 ```json
-403 Access Denied/Forbidden
-```
+403 Access Denied/Forbidden```
 
-If automatic tax is enabled on the store, the value of `tax_class_id` will have no effect on the calculation of taxes.
+
+If automatic tax is enabled on the store, the value of tax_class_id will have no effect on the calculation of taxes.
 
 ## Delete a Product
 
@@ -659,16 +658,16 @@ Deletes a product.
 
 |||
 |---|---|
-| Basic Auth: | `DELETE /api/v2/products/{id}` |
-| OAuth: | `DELETE /stores/{store_hash}/v2/products/{id}` |
+| Basic Auth: | DELETE /api/v2/products/{id} |
+| OAuth: | DELETE /stores/{store_hash}/v2/products/{id} |
 
 ### Notes
 
-Successful deletion of a product results in a `204 No Content` response.
+Successful deletion of a product results in a 204 No Content response.
 
 ```json
-204 No Content
-```
+204 No Content```
+
 
 ## Delete All Products
 
@@ -676,13 +675,12 @@ Deletes all products from the store.
 
 |||
 |---|---|
-| Basic Auth: | `DELETE /api/v2/products` |
-| OAuth: | `DELETE /stores/{store_hash}/v2/products` |
+| Basic Auth: | DELETE /api/v2/products |
+| OAuth: | DELETE /stores/{store_hash}/v2/products |
 
 ### Notes
 
-Successful deletion of all products returns a `204 No Content` response.
+Successful deletion of all products returns a 204 No Content response.
 
 ```json 
-204 No Content
-```
+204 No Content```

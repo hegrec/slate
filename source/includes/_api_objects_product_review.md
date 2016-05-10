@@ -1,9 +1,5 @@
 # Product Reviews 
 
-|||
-|---|---|
-| Managed by | [Product Reviews Resource](/api/stores/v2/products/reviews)
-
 ## Product Review Object - Properties
 
 | Name | Type | Description |

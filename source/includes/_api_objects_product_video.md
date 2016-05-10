@@ -1,9 +1,5 @@
 # Videos
 
-|||
-|---|---|
-| Managed by | [Product Videos Resource](/api/stores/v2/products/videos)
-
 ## Videos Object - Properties
 
 | Name | Type | Description |

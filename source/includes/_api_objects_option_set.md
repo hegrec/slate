@@ -1,8 +1,6 @@
 # Product Option Sets
 
-|||
-|---|---|
-| Managed by | [Option Sets Resource](/api/stores/v2/option_sets)
+A reusable set of option facets that can be applied to products.
 
 ## Product Option Set Object - Properties
 

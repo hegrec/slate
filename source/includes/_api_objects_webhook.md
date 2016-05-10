@@ -1,8 +1,5 @@
 # Webhook object
 
-|||
-|---|---|
-| **Managed by** | [Webhooks Resource](/api/stores/v2/webhooks)
 
 ## Properties
 

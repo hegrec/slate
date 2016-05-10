@@ -2,11 +2,7 @@
 
 The tax_class object contains the ID and name of the tax class used to calculate tax for stores using manually created tax classes. NOTE: Data inside the tax_class object of a store configured to use automatic taxes is ignored during tax calculations.
 
-|||
-|---|---|
-| Managed by | [Tax Classes Resource](/api/stores/v2/tax_classes)
-
-## Properties
+## Tax Class Object - Properties
 
 | Name | Type | Description |
 | --- | --- | --- |

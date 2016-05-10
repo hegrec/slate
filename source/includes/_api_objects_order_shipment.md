@@ -2,10 +2,6 @@
 
 Tracks a package consignment from an order, shipped from the seller to the buyer.
 
-|||
-|---|---|
-| **Managed by** | [Shipments Resource](/api/stores/v2/orders/shipments)
-
 ## Shipment Object - Properties
 
 | Name | Type | Description |

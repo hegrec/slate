@@ -1,10 +1,6 @@
 # Product SKUs
 
-|||
-|---|---|
-| Managed by | [SKUs Resource](/api/v2/products/skus)
-
-## Properties
+## Product SKU Object - Properties
 
 | Name | Type | Description |
 | --- | --- | --- |

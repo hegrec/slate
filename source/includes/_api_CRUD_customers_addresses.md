@@ -1,12 +1,10 @@
-## Postal addresses belonging to a customer.
 |||
 |---|---|
 | **Manages** |
 | **OAuth Scopes** | `store_v2_customers`
 ||`store_v2_customers_read_only`
 
-
-## Operations
+## Customer Address Operations
 
 *   [List Customer Addresses](#list-customer-addresses)
 *   [Get a Customer Address](#get-a-customer-address)
@@ -31,8 +29,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/customers/{customer_id}/addresses?page={number}` |
-| `Limit` | int | `/api/v2/customers/{customer_id}/addresses?limit={count}` |
+| Page | int | /api/v2/customers/{customer_id}/addresses?page={number} |
+| Limit | int | /api/v2/customers/{customer_id}/addresses?limit={count} |
 
 ```json
 [
@@ -112,21 +110,21 @@ Creates a new customer address. (Note: The "state" property cannot be null. As a
 
 The following properties of the customer address are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `country_iso2`
+*   id
+*   country_iso2
 
 ### Requirements
 
 The following properties of the customer address are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `first_name`
-*   `last_name`
-*   `phone`
-*   `street_1`
-*   `city`
-*   `state`
-*   `zip`
-*   `country`
+*   first_name
+*   last_name
+*   phone
+*   street_1
+*   city
+*   state
+*   zip
+*   country
 
 ```curl
 {
@@ -174,8 +172,8 @@ Updates an existing customer address.
 
 The following properties of the customer address are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `country_iso2`
+*   id
+*   country_iso2
 
 ### Requirements
 
@@ -238,5 +236,5 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/customers/{customer_id}/addresses?page={number}` |
-| `Limit` | int | `/api/v2/customers/{customer_id}/addresses?limit={count}` |
+| Page | int | /api/v2/customers/{customer_id}/addresses?page={number} |
+| Limit | int | /api/v2/customers/{customer_id}/addresses?limit={count} |

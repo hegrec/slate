@@ -1,11 +1,9 @@
-## Countries and territories, identified by their ISO 3166 country codes.
-
 |||
 |---|---|
 | **Manages** |
 | **OAuth Scopes** | `default`
 
-## Operations
+## Country Operations
 
 *   [List Countries](#list-countries)
 *   [Get a Country](#get-a-country)
@@ -26,9 +24,9 @@ Filter parameters can be added to the URL query string to select specific countr
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `country` | string | `/api/v2/countries?country={value}` |
-| `country_iso2` | string | `/api/v2/countries?country_iso2={value}` |
-| `country_iso3` | string | `/api/v2/countries?country_iso3={value}` |
+| country | string | /api/v2/countries?country={value} |
+| country_iso2 | string | /api/v2/countries?country_iso2={value} |
+| country_iso3 | string | /api/v2/countries?country_iso3={value} |
 
 ### Pagination
 
@@ -36,8 +34,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| `Page` | int | `/api/v2/countries?page={number}` |
-| `Limit` | int | `/api/v2/countries?limit={count}` |
+| Page | int | /api/v2/countries?page={number} |
+| Limit | int | /api/v2/countries?limit={count} |
 
 ```json
 [
