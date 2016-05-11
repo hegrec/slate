@@ -16,7 +16,7 @@ If the user interface retrieves images, scripts, or other assets over a connecti
 
 ## About same-origin policies
 
-[Same-origin policies](http://en.wikipedia.org/wiki/Same-origin_policy) restrict apps running within iframes from performing certain activities, such as interacting with other services and making OAuth connections. While apps that operate within the BigCommerce iframe get strong preference during App Store considerations, we sometimes make exceptions for apps that need to interact and authenticate to other services. If your app requires this, we advise you to open a new tab for actions that cannot occur within the iframe.
+[Same-origin policies](http://en.wikipedia.org/wiki/Same-origin_policy) restrict apps running within iframes from performing certain activities, such as interacting with other services and making OAuth connections. While apps that operate within the BigCommerce iframe get strong preference during App Store considerations, we sometimes make exceptions for apps that need to interact with, and authenticate to, other services. If your app requires this, we advise you to open a new tab for actions that cannot occur within the iframe.
 
 ## About P3P and cookies
 
