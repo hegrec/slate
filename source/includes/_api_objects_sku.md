@@ -1,5 +1,7 @@
 # Product SKUs
 
+Stock Keeping Unit identifiers associated with products or product options.
+
 ## Product SKU Object - Properties
 
 | Name | Type | Description |

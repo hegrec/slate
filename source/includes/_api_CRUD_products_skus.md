@@ -1,12 +1,10 @@
-## Stock Keeping Unit identifiers associated with products.
-
 |||
 |---|---
 | **Manages** |
 | **OAuth Scopes** | `store_v2_products`
 ||`store_v2_products_read_only`
 
-## Operations
+## Product SKU Operations
 
 *   [List Product SKUs](#list-product-skus)
 *   [Get a Product SKU](#get-a-product-sku)
@@ -53,8 +51,8 @@ Parameters can be added to the URL query string to paginate the collection. The 
 
 | Parameter | Type | Example |
 | --- | --- | --- |
-| Page | int | /api/v2/products/{product_id}/skus?page={number} |
-| Limit | int | /api/v2/products/{product_id}/skus?limit={count} |
+| page | int | /api/v2/products/{product_id}/skus?page={number} |
+| limit | int | /api/v2/products/{product_id}/skus?limit={count} |
 
 ```json
 [
@@ -178,17 +176,17 @@ Creates a new product SKU.
 
 The following properties of the sku are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `product_id`
-*   `adjusted_price`
-*   `adjusted_weight`
+*   id
+*   product_id
+*   adjusted_price
+*   adjusted_weight
 
 ### Requirements
 
 The following properties of the sku are required. The request won’t be fulfilled unless these properties are valid.
 
-*   `sku`
-*   `options`
+*   sku
+*   options
 
 ### Notes
 
@@ -236,14 +234,14 @@ Updates an existing product SKU.
 
 The following properties of the sku are read-only. If one or more of these properties are included in the request, it will be rejected.
 
-*   `id`
-*   `product_id`
-*   `adjusted_price`
-*   `adjusted_weight`
+*   id
+*   product_id
+*   adjusted_price
+*   adjusted_weight
 
 ### Requirements
 
-The following properties of the sku are required. The request won’t be fulfilled unless these properties are valid.
+There are no required properties for updating a product SKU.
 
 ```json
 {
@@ -264,8 +262,8 @@ The following properties of the sku are required. The request won’t be fulfill
     "image_file": "",
   "options": [
     {
-      "option_value_id": 51,
-      "product_option_id": 20
+      "product_option_id": 20,
+      "option_value_id": 51
     }
   ]
 }
